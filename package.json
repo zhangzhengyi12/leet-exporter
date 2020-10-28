@@ -1,0 +1,24 @@
+{
+  "name": "leet-exporter",
+  "version": "1.0.0",
+  "description": "leetcode submissions exporter",
+  "main": "index.js",
+  "scripts": {
+    "export": "node src/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zhangzhengyi12/leet-exporter.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/zhangzhengyi12/leet-exporter/issues"
+  },
+  "homepage": "https://github.com/zhangzhengyi12/leet-exporter#readme",
+  "dependencies": {
+    "axios": "^0.21.0",
+    "cheerio": "^1.0.0-rc.3",
+    "ejs": "^3.1.5"
+  }
+}

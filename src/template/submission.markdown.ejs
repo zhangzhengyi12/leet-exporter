@@ -1,0 +1,11 @@
+<% if (info) { %>
+## <%- info.title  %>
+
+[problem](https://leetcode.com/problems/<%- info.title_slug %>/ )
+
+[submission detail](https://leetcode.com<%- info.url %> )
+
+```<%- info.lang %> 
+<%- info.code %> 
+```
+<% } %>
