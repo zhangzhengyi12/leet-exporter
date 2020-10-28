@@ -1,6 +1,4 @@
 const requestor = require('../requestor')
-const utils = require('../utils')
-const fs = require('fs')
 
 const maxRetryCount = 3
 const fetchGroupCount = 10
@@ -8,7 +6,7 @@ const pageLimtCount = 20
 const fetchSleepTime = 2000
 
 const sleep = time =>
-  new Promise((resolve, reject) => {
+  new Promise((resolve) => {
     setTimeout(resolve, time)
   })
 
@@ -98,7 +96,7 @@ class Fetcher {
     if (this.retryMap[pageIndex]) {
       this.retryMap[pageIndex]++
     } else {
-      this.retryMap = 1
+      this.retryMap[pageIndex] = 1
     }
   }
 }

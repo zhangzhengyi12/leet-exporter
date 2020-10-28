@@ -8,13 +8,13 @@ export your submissions to markdown file
 
 1. git clone git@github.com:zhangzhengyi12/leet-exporter.git
 2. cd leet-exporter && npm i
-3. set src/config/index.js [cookie] to your leetcode api cookie
+3. touch src/cookie.txt && echo "{your leetcode api cookie}" > src/cookie.text
 4. npm run export
 
 
-## output example
+# output example
 
-# LeetCode Markdown Export
+## LeetCode Markdown Export
 
 ## Triangle
 

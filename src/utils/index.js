@@ -3,7 +3,7 @@ const path = require('path')
 const config = require('../config')
 
 const createAbsPath = aPath => {
-  return path.resolve(config.root, aPath)
+  return path.resolve(__dirname, '../../', aPath)
 }
 
 module.exports = {

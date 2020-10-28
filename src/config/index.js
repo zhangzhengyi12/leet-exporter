@@ -1,6 +1,20 @@
 const path = require('path')
+const fs = require('fs')
+const utils = require('../utils')
+
+const cookie = (() => {
+  let res = ''
+  try {
+    res = fs.readFileSync(utils.createAbsPath('src/cookie.txt'), 'utf-8')
+  } catch (e) {
+    console.log(e)
+  }
+  if (!res) {
+    console.error('请创建cookie文件')
+  }
+  return ''
+})()
 
 module.exports = {
-  cookie: `__cfduid=df5369507cdcd8bf104573b4ad6866b291602252160; _ga=GA1.2.1918963981.1602252175; csrftoken=1hlQHvSYrIfZESWbvSpjsTYfByltgRKySj80EvuJ9JwOhZIrnEsqNyVatKCF2JI0; __stripe_mid=fb625dea-f58b-4fcb-ac98-3c7f862b16974857f7; LEETCODE_SESSION=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJfYXV0aF91c2VyX2lkIjoiMzE1NTA0MSIsIl9hdXRoX3VzZXJfYmFja2VuZCI6ImFsbGF1dGguYWNjb3VudC5hdXRoX2JhY2tlbmRzLkF1dGhlbnRpY2F0aW9uQmFja2VuZCIsIl9hdXRoX3VzZXJfaGFzaCI6IjhlNGQwNjM1YjUyYTc0OWQ4ZDExYTIzYjQ3OWEyNjFmZTAzOTVjOTMiLCJpZCI6MzE1NTA0MSwiZW1haWwiOiJ6aGFuZ3poZW5neWkxMkBsaXZlLmNvbSIsInVzZXJuYW1lIjoiemhhbmd6aGVuZ3lpMTIiLCJ1c2VyX3NsdWciOiJ6aGFuZ3poZW5neWkxMiIsImF2YXRhciI6Imh0dHBzOi8vYXNzZXRzLmxlZXRjb2RlLmNvbS91c2Vycy96aGFuZ3poZW5neWkxMi9hdmF0YXJfMTU5NDg4NzI3MC5wbmciLCJyZWZyZXNoZWRfYXQiOjE2MDM4NTcyNjYsImlwIjoiNTIuMTE5LjEuNTMiLCJpZGVudGl0eSI6IjJlM2IwN2Q1MDY1OTU2ODI5MjliYzNiMTNmMDgwMDAxIiwic2Vzc2lvbl9pZCI6MjY2NzAwMX0.8ONH5BTEsJY6NDc-HvJ8oWYBHuACfvVVo1qaDNLrD28; _gid=GA1.2.1971817388.1603857267; __atuvc=2%7C41%2C13%7C42%2C12%7C43%2C6%7C44; c_a_u="emhhbmd6aGVuZ3lpMTI=:1kXhBq:P7CbTh2DXS6jmZ4-itX2Rn7jvwI"; __cf_bm=05c48b8ecbfe08e3ca0ebd23dffc1a09cea2a5e9-1603876196-1800-AcusgDwQsRM8lB9r90knASctx146d6knIjWbEF2prJA8ZHIJZJTxoljFdbAVdhh0VmDqeRUO+oEHlZOpJBf4Xic=; _gat=1`,
-  root: path.resolve(__dirname, '../../')
+  cookie
 }
